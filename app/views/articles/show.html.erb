@@ -1,0 +1,15 @@
+<% id = params[:id] %>
+<h1>Article n° <%= id %></h1>
+
+<h2> <%= @article.title%></h2>
+<p> <%= @article.content %></p>
+
+
+<%= link_to "   Edit   ", "#{articles_path}/#{id}/edit" %>
+
+<%= link_to "   Delete   ", "#{articles_path}/#{id}",
+  method: :delete,
+  data: { confirm: "Are you sure ?" } %>
+
+<%= link_to "   Retour   ", articles_path %>
+

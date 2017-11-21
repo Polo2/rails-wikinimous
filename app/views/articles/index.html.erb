@@ -1,0 +1,14 @@
+<h1>Liste des articles</h1>
+
+<ul>
+
+<% @articles.each do |art| %>
+
+ <li> <a href="<%= "#{articles_path}/#{art.id}"%>"> <%=art.id %> </a> - <%=art.title %>, <%= art.content %> </li>
+
+<% end %>
+
+</ul>
+
+
+<%= link_to "Nouvel article", "/articles/new" %>
